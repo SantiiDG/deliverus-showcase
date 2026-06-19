@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliverUS REST API - Interactive Showcase | Santiago Diestro Gallego</title>
+    <meta name="description" content="Interactive showcase of DeliverUS, a secure food delivery RESTful backend API built with Node.js, Express, and Sequelize ORM. Created by Santiago Diestro Gallego.">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fa-solid fa-utensils logo-icon"></i>
+                <span>DeliverUS <span class="text-accent">API</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">Contribution</a>
+                <a href="#tech" class="nav-link">Technologies</a>
+                <a href="#simulator" class="nav-link btn-nav-sim">Launch Simulator</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#devops" class="nav-link">Security & QA</a>
+            </nav>
+            <div class="nav-socials">
+                <a href="https://github.com/SantiiDG" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/santiago-diestro-b6428116a/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge-glow"><i class="fa-solid fa-code-fork"></i> Backend Development Project</span>
+                    <span class="badge-glow success"><i class="fa-solid fa-lock"></i> Closed Source / Academic</span>
+                </div>
+                <h1 class="hero-title">
+                    DeliverUS <span class="text-gradient">RESTful API</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Explore a secure, multi-tenant food delivery backend API built with Node.js, Express, and Sequelize ORM. Featuring parameterized queries for SQL injection defense, payload validation, and Docker environments. Test its constraints in this interactive simulator.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#simulator" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> Launch API Simulator</a>
+                    <a href="https://github.com/SantiiDG" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Visit My GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Santiago's Role Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2 class="section-title">My Project Contribution</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card role-card">
+                    <div class="card-glow"></div>
+                    <div class="role-header">
+                        <div class="role-avatar">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h3>Santiago Diestro Gallego</h3>
+                            <p class="text-accent">Backend & Security Lead</p>
+                        </div>
+                    </div>
+                    <p class="role-desc">
+                        As the backend lead, my primary responsibility was designing and implementing secure order management controllers, configuring Sequelize relational models for MariaDB databases, and setting up strict validation and sanitation middlewares to block SQL injection and scripting threats.
+                    </p>
+                    <div class="role-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">28</span>
+                            <span class="stat-label">Commits</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">45+h</span>
+                            <span class="stat-label">Work Hours (Clockify)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">0</span>
+                            <span class="stat-label">SQL Vulnerabilities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card features-highlight">
+                    <div class="card-glow"></div>
+                    <h3>Key Responsibilities</h3>
+                    <ul class="highlight-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <div>
+                                <strong>Order Lifecycle Controllers:</strong> Programmed Express backend controllers to manage order status transitions (pending, in process, sent, delivered) and calculate shipping costs dynamically.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <div>
+                                <strong>ORM Database Architecture:</strong> Configured Sequelize models mapping relationship layers among users, restaurants, products, and order entities.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <div>
+                                <strong>Security Validation Pipelines:</strong> Integrated data sanitization, SQL Injection shields via Sequelize parametrized statements, and HTTP security headers via the Helmet package.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <div>
+                                <strong>Database Migrations & Seeders:</strong> Authored custom MariaDB table migration scripts and seeders to populate initial system categories and mock users.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="section">
+            <div class="section-header">
+                <h2 class="section-title">The Technical Ecosystem</h2>
+                <p class="section-subtitle">A robust, secure, and performant REST API backend</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fa-brands fa-node-js tech-icon text-node"></i>
+                    <h4>Node.js</h4>
+                    <p>JavaScript runtime environment providing fast, asynchronous, and non-blocking execution.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-solid fa-server tech-icon text-express"></i>
+                    <h4>Express.js</h4>
+                    <p>Minimalist backend web framework publishing secure, routing-controlled RESTful services.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-solid fa-object-group tech-icon text-sequelize"></i>
+                    <h4>Sequelize ORM</h4>
+                    <p>Promise-based ORM supporting MariaDB database schemas, migrations, and query sanitization.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-solid fa-database tech-icon text-mariadb"></i>
+                    <h4>MariaDB / MySQL</h4>
+                    <p>Secure relational database engine storing multi-tenant restaurant, product, and user records.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-brands fa-docker tech-icon text-docker"></i>
+                    <h4>Docker</h4>
+                    <p>Multi-container setup via Docker Compose wrapping the Node backend and MariaDB database.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-solid fa-user-lock tech-icon text-helmet"></i>
+                    <h4>Helmet Security</h4>
+                    <p>Secure Express middleware setting crucial HTTP headers to mitigate cross-site scripting and hijackings.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-solid fa-filter tech-icon text-validator"></i>
+                    <h4>Express Validator</h4>
+                    <p>Strict schema validation middleware parsing sanitization patterns on input payloads.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fa-solid fa-code tech-icon text-eslint"></i>
+                    <h4>ESLint</h4>
+                    <p>Static syntax checker maintaining coding patterns and standard practices across the codebase.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulator Section -->
+        <section id="simulator" class="section section-simulator">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Platform Simulator</h2>
+                <p class="section-subtitle">Experience the API constraints and backend logic in real-time</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Simulator App Frame -->
+            <div class="app-frame">
+                <div class="app-header-bar">
+                    <div class="header-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="header-address">
+                        <i class="fa-solid fa-lock text-success"></i>
+                        <span>https://api.deliverus-food.com/v1/docs</span>
+                    </div>
+                    <div class="header-user">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <span id="current-user-badge">Restaurant Owner</span>
+                    </div>
+                </div>
+
+                <div class="app-body">
+                    <!-- Sidebar Navigation -->
+                    <aside class="app-sidebar">
+                        <div class="sidebar-logo">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>DeliverUS <span class="badge-plan">EXPRESS</span></span>
+                        </div>
+                        <nav class="sidebar-menu" id="sidebar-menu-container">
+                            <!-- Populated dynamically by app.js -->
+                        </nav>
+                        <div class="sidebar-footer">
+                            <div class="role-selector-container">
+                                <label for="role-select">Switch Active Role:</label>
+                                <select id="role-select">
+                                    <option value="owner">Restaurant Owner (Analytics)</option>
+                                    <option value="customer">Customer (Order Food)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main App Content Area -->
+                    <div class="app-content" id="app-view-container">
+                        <!-- Content gets dynamically populated by app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture & Database Schema -->
+        <section id="architecture" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Architecture & Data Structures</h2>
+                <p class="section-subtitle">Robust, clean, and scalable software design with separation of concerns</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="arch-tabs">
+                <button class="arch-tab-btn active" data-tab="arch-diagram">Architecture Diagram</button>
+                <button class="arch-tab-btn" data-tab="db-schema">Database Schema</button>
+            </div>
+
+            <div class="arch-tab-content active" id="arch-diagram">
+                <div class="architecture-visual">
+                    <div class="arch-node client-node">
+                        <div class="node-icon"><i class="fa-brands fa-react"></i></div>
+                        <h5>React Native App</h5>
+                        <p>Cross-platform application (iOS & Android) consuming JSON responses via Axios.</p>
+                    </div>
+                    <div class="arch-flow-arrow"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>REST Request (Payload)</span></div>
+                    <div class="arch-node gateway-node">
+                        <div class="node-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <h5>Express Middlewares</h5>
+                        <p>Safety validation, SQL injection blocks, data sanitization, and Helmet HTTP security headers.</p>
+                    </div>
+                    <div class="arch-flow-arrow"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Sanitized Request</span></div>
+                    <div class="arch-node api-node">
+                        <div class="node-icon"><i class="fa-brands fa-node-js"></i></div>
+                        <h5>Node.js / Express API</h5>
+                        <p>Express routes mapping models (Restaurant, Product, Order controllers).</p>
+                    </div>
+                    <div class="arch-flow-arrow"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Sequelize Queries</span></div>
+                    <div class="arch-node db-node">
+                        <div class="node-icon"><i class="fa-solid fa-database"></i></div>
+                        <h5>MariaDB SQL Server</h5>
+                        <p>Multi-tenant relational database instances wrapped in Docker volumes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arch-tab-content" id="db-schema">
+                <div class="db-schema-visual">
+                    <!-- Table Users -->
+                    <div class="db-table">
+                        <div class="table-title">users</div>
+                        <ul class="table-fields">
+                            <li><span class="pk">PK</span> <strong>id</strong> <span class="type">INTEGER</span></li>
+                            <li><strong>first_name</strong> <span class="type">VARCHAR(255)</span></li>
+                            <li><strong>last_name</strong> <span class="type">VARCHAR(255)</span></li>
+                            <li><strong>email</strong> <span class="type">VARCHAR(255)</span></li>
+                            <li><strong>phone_number</strong> <span class="type">VARCHAR(255)</span></li>
+                            <li><strong>user_type</strong> <span class="type">ENUM(owner, customer)</span></li>
+                            <li><strong>password</strong> <span class="type">VARCHAR(255)</span></li>
+                        </ul>
+                    </div>
+                    <!-- Relation Arrow -->
+                    <div class="db-relation-line"><i class="fa-solid fa-link"></i></div>
+                    <!-- Table Restaurants -->
+                    <div class="db-table">
+                        <div class="table-title">restaurants</div>
+                        <ul class="table-fields">
+                            <li><span class="pk">PK</span> <strong>id</strong> <span class="type">INTEGER</span></li>
+                            <li><strong>name</strong> <span class="type">VARCHAR(255)</span></li>
+                            <li><strong>shipping_costs</strong> <span class="type">DOUBLE</span></li>
+                            <li><strong>status</strong> <span class="type">ENUM(accepting, closed)</span></li>
+                            <li><span class="fk">FK</span> <strong>owner_id</strong> <span class="type">INTEGER</span></li>
+                        </ul>
+                    </div>
+                    <!-- Relation Arrow -->
+                    <div class="db-relation-line"><i class="fa-solid fa-link"></i></div>
+                    <!-- Table Products -->
+                    <div class="db-table">
+                        <div class="table-title">products</div>
+                        <ul class="table-fields">
+                            <li><span class="pk">PK</span> <strong>id</strong> <span class="type">INTEGER</span></li>
+                            <li><strong>name</strong> <span class="type">VARCHAR(255)</span></li>
+                            <li><strong>price</strong> <span class="type">DOUBLE</span></li>
+                            <li><strong>availability</strong> <span class="type">BOOLEAN</span></li>
+                            <li><span class="fk">FK</span> <strong>restaurant_id</strong> <span class="type">INTEGER</span></li>
+                        </ul>
+                    </div>
+                    <!-- Relation Arrow -->
+                    <div class="db-relation-line"><i class="fa-solid fa-link"></i></div>
+                    <!-- Table Orders -->
+                    <div class="db-table font-highlight">
+                        <div class="table-title">orders</div>
+                        <ul class="table-fields">
+                            <li><span class="pk">PK</span> <strong>id</strong> <span class="type">INTEGER</span></li>
+                            <li><strong>total_price</strong> <span class="type">DOUBLE</span></li>
+                            <li><strong>shipping_costs</strong> <span class="type">DOUBLE</span></li>
+                            <li><strong>status</strong> <span class="type">ENUM(pending, process...)</span></li>
+                            <li><span class="fk">FK</span> <strong>restaurant_id</strong> <span class="type">INTEGER</span></li>
+                            <li><span class="fk">FK</span> <strong>customer_id</strong> <span class="type">INTEGER</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DevOps & Security section -->
+        <section id="devops" class="section bg-card-section">
+            <div class="section-header">
+                <h2 class="section-title">DevOps & Security Safeguards</h2>
+                <p class="section-subtitle">Integrating static syntax testing, query parameterization, and environment containerization</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="devops-grid">
+                <div class="metric-card">
+                    <div class="sonar-gauge">
+                        <span class="gauge-grade">12</span>
+                        <div class="gauge-label" style="max-width: 70px;">Security Headers</div>
+                    </div>
+                    <div class="metric-details">
+                        <h5>Secure Server Integration</h5>
+                        <ul class="metric-list">
+                            <li><i class="fa-solid fa-shield text-success"></i> <strong>Sequelize Sanitization:</strong> Fully prevents SQL injections</li>
+                            <li><i class="fa-solid fa-user-lock text-success"></i> <strong>Helmet Configured:</strong> Mitigates XSS and hijack vectors</li>
+                            <li><i class="fa-solid fa-vial text-accent"></i> <strong>Unit Validations:</strong> Payload schemas parsed by Express-Validator</li>
+                            <li><i class="fa-solid fa-check-circle text-success"></i> <strong>Code Standards:</strong> Automated syntax matching via ESLint</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="devops-card">
+                    <h5>Docker Environment Architecture</h5>
+                    <p>Docker Compose manages multi-container environment configurations isolated for testing:</p>
+                    <div class="gitflow-sim">
+                        <div class="git-branch main-branch">
+                            <span class="branch-label">Mariadb Instance</span>
+                            <div class="git-node" title="Mariadb Port 3306" style="background:#00b0ff;"></div>
+                            <div class="git-line"></div>
+                            <div class="dash-card-lbl">Relational Multi-tenant Storage</div>
+                        </div>
+                        <div class="git-branch develop-branch">
+                            <span class="branch-label">Node Backend</span>
+                            <div class="git-node" title="Backend Server Port 3000" style="background:#42b983;"></div>
+                            <div class="git-line"></div>
+                            <div class="dash-card-lbl">Express REST Endpoints Server</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-utensils logo-icon"></i>
+                <span>DeliverUS <span class="text-accent">API</span></span>
+            </div>
+            <p class="footer-text">
+                This portfolio is a demonstration showcase designed and built by <strong>Santiago Diestro Gallego</strong>. All rights reserved. &copy; 2026.
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/SantiiDG" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/santiago-diestro-b6428116a/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:santi18diestro@gmail.com"><i class="fa-solid fa-envelope"></i> santi18diestro@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js?v=1"></script>
+</body>
+</html>
